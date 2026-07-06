@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://ca8ls7k38visy"]
+
+[ext_resource type="Script" uid="uid://dubcryfrilokf" path="res://GUI/pause_menu.gd" id="1_hdmo1"]
+
+[sub_resource type="Theme" id="Theme_rhts7"]
+default_font_size = 55
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=2084416728]
+process_mode = 3
+script = ExtResource("1_hdmo1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1686535542]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -521.1039
+offset_top = -321.0
+offset_right = 521.1039
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1721442563]
+layout_mode = 2
+color = Color(0.4, 0.3372549, 0.42352942, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=424581413]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=1644549356]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_rhts7")
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=617547809]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+text = "Resume"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=856303822]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+disabled = true
+text = "Settings"
+
+[node name="Main Menu" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1406319424]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Main Menu" to="." method="_on_main_menu_pressed"]

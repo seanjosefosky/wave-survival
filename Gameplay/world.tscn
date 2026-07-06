@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dehljd47hc86v"]
+
+[ext_resource type="Script" uid="uid://c2ly8dypx4xh0" path="res://Gameplay/world.gd" id="1_036b0"]
+[ext_resource type="PackedScene" uid="uid://c6uk8ka7fb3lc" path="res://Gameplay/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://dvrmdrf3oxari" path="res://Gameplay/enemy_spawner.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://cl2rijst0a8oe" path="res://map_generator.tscn" id="2_ygxdd"]
+[ext_resource type="Texture2D" uid="uid://cb7l8rjfukvxs" path="res://Textures/XpUnder.png" id="6_7rl1c"]
+[ext_resource type="PackedScene" uid="uid://ca8ls7k38visy" path="res://GUI/pause_menu.tscn" id="6_dwbse"]
+[ext_resource type="Texture2D" uid="uid://qwombm0vi567" path="res://Textures/XpOver.png" id="7_onu7j"]
+
+[node name="World" type="Node2D" unique_id=71858953 node_paths=PackedStringArray("player")]
+script = ExtResource("1_036b0")
+player = NodePath("Player")
+
+[node name="MapGenerator" parent="." unique_id=1828262691 instance=ExtResource("2_ygxdd")]
+
+[node name="Player" parent="." unique_id=783083630 instance=ExtResource("1_f3sb7")]
+position = Vector2(1065, 566)
+
+[node name="EnemySpawner" parent="." unique_id=853304565 node_paths=PackedStringArray("enemies") instance=ExtResource("2_fj7yv")]
+enemies = NodePath("../Enemies")
+
+[node name="SpawnPath" parent="EnemySpawner" index="2" unique_id=719261016]
+position = Vector2(25.00003, -65.000015)
+scale = Vector2(1.7568885, 1.668334)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=632330818]
+
+[node name="PauseMenu" parent="." unique_id=2084416728 instance=ExtResource("6_dwbse")]
+visible = false
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1868081426]
+
+[node name="XPBar" type="TextureProgressBar" parent="UI" unique_id=1971513048]
+texture_filter = 1
+offset_left = 476.0
+offset_top = 6.0
+offset_right = 757.0
+offset_bottom = 164.0
+max_value = 5.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_7rl1c")
+texture_progress = ExtResource("7_onu7j")
+metadata/_edit_use_anchors_ = true
+
+[editable path="EnemySpawner"]

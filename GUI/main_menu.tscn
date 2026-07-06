@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://drmb12noedd7r"]
+
+[ext_resource type="Script" uid="uid://ll1ljupw8qe0" path="res://GUI/main_menu.gd" id="1_kf0uv"]
+
+[sub_resource type="Theme" id="Theme_rhts7"]
+default_font_size = 55
+
+[node name="MainMenu" type="CanvasLayer" unique_id=2084416728]
+process_mode = 3
+script = ExtResource("1_kf0uv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1686535542]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1721442563]
+layout_mode = 2
+color = Color(0.4, 0.3372549, 0.42352942, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=424581413]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=242399510]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.52428055, 0.56165147, 0.52379483, 1)
+theme_override_font_sizes/font_size = 100
+text = "Very Cool Survival Game"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=1800837245]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=1644549356]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_rhts7")
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=617547809]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+text = "Play"
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=856303822]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+disabled = true
+text = "Settings"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/GridContainer" unique_id=1406319424]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(500, 100)
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/GridContainer/Quit" to="." method="_on_quit_pressed"]

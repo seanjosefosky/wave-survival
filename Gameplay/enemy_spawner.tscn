@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dvrmdrf3oxari"]
+
+[ext_resource type="Script" uid="uid://8ecvafkj4yml" path="res://Gameplay/enemy_spawner.gd" id="1_ewhtn"]
+
+[sub_resource type="Curve" id="Curve_00s5r"]
+_limits = [0.5, 2.5, 0.0, 1200.0]
+_data = [Vector2(0, 2.1000001), 0.0, 0.0, 0, 0, Vector2(606.0606, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_furxd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -39.022095, -176.5066, 0, 0, 0, 0, -237.94368, -174.17416, 0, 0, 0, 0, -316.0282, -178.83907, 0, 0, 0, 0, -365.71826, -177.67284, 0, 0, 0, 0, -373.4704, 236.33775, 0, 0, 0, 0, -264.30988, 236.33775, 0, 0, 0, 0, -137, 234, 0, 0, 0, 0, 23, 248, 0, 0, 0, 0, 139, 234, -0.7447157, 8.963863, 0.7447157, -8.963863, 325.32718, 242.16887, 0, 0, 0, 0, 328.6495, 88.22691, 0, 0, 0, 0, 318.6825, -107.69922, 0, 0, 0, 0, 316.46765, -170.67548, 0, 0, 0, 0, 218, -185, 0, 0, 0, 0, 171, -181, 0, 0, 0, 0, -37.914658, -177.67284)
+}
+point_count = 16
+
+[node name="EnemySpawner" type="Node2D" unique_id=853304565]
+script = ExtResource("1_ewhtn")
+spawn_curve = SubResource("Curve_00s5r")
+
+[node name="PlayTime" type="Timer" parent="." unique_id=1576826221]
+autostart = true
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=698515262]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnPath" type="Path2D" parent="." unique_id=719261016]
+curve = SubResource("Curve2D_furxd")
+
+[node name="EnemySpawn" type="PathFollow2D" parent="SpawnPath" unique_id=1186447113]
+position = Vector2(-39.022095, -176.5066)
+rotation = 3.1298678
+
+[connection signal="timeout" from="PlayTime" to="." method="_on_play_time_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

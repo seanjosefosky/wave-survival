@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dycqa4u32ryt7"]
+
+[ext_resource type="Script" uid="uid://ct5uw3oxckqy8" path="res://Gameplay/weapon.gd" id="1_swcir"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cv017"]
+radius = 172.00291
+
+[node name="Weapon" type="Area2D" unique_id=1147388600]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_swcir")
+
+[node name="EnemyDetection" type="CollisionShape2D" parent="." unique_id=820465116]
+shape = SubResource("CircleShape2D_cv017")
+debug_color = Color(0.7085844, 0.31063703, 0.9338908, 0.41960785)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=420506128]
+autostart = true
+
+[node name="WeaponPivot" type="Marker2D" parent="." unique_id=1840502883]
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot" unique_id=1194116835]
+position = Vector2(2, 0)
+
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

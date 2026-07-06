@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cl2rijst0a8oe"]
+
+[ext_resource type="Script" uid="uid://bc06kaisshclq" path="res://map_generator.gd" id="1_0r6lh"]
+[ext_resource type="Texture2D" uid="uid://qwj68xjhunpc" path="res://Textures/MapGenTextures.png" id="2_7kg47"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ej6gg"]
+texture = ExtResource("2_7kg47")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0r6lh"]
+sources/0 = SubResource("TileSetAtlasSource_ej6gg")
+
+[node name="MapGenerator" type="Node2D" unique_id=1828262691]
+script = ExtResource("1_0r6lh")
+map_height = 1000
+map_width = 1000
+noise_scale = 0.01
+deep_water_threshold = 0.38
+coast_threshold = 0.55
+inland_threshold = 0.65
+hill_threshold = 0.68
+mountain_threshold = 0.72
+mountain_peak_threshold = 0.8
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2123974563]
+tile_set = SubResource("TileSet_0r6lh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1423142164]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=591983323]
+offset_top = 979.0
+offset_right = 661.0
+offset_bottom = 1077.0
+color = Color(0, 0, 0, 0.16470589)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2137074975]
+offset_top = 979.0
+offset_right = 203.0
+offset_bottom = 1076.0
+theme_override_font_sizes/font_size = 71
+text = "Seed: "

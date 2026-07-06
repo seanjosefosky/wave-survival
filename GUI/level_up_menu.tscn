@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://def7xayejbqqt"]
+
+[ext_resource type="Script" uid="uid://brijvvka2nsqc" path="res://GUI/level_up_menu.gd" id="1_ib382"]
+
+[node name="LevelUpMenu" type="CanvasLayer" unique_id=699942841]
+script = ExtResource("1_ib382")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=889265446]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -168.0
+offset_right = 144.0
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1822462579]
+layout_mode = 2
+color = Color(0.4, 0.3372549, 0.42352942, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=393479710]
+layout_mode = 2
+alignment = 1
+
+[node name="Button1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2137055442]
+layout_mode = 2
+text = "+ Damage"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1250525363]
+layout_mode = 2
+text = "+ Attack Speed"
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1036072495]
+layout_mode = 2
+text = "+ Movement Speed"
+
+[connection signal="choice_made" from="." to="." method="_on_choice_made"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
