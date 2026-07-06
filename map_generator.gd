@@ -2,7 +2,6 @@ class_name MapGenerator
 extends Node2D
 
 @onready var tile_map_layer: TileMapLayer = $TileMapLayer
-@onready var seed_label: Label = $CanvasLayer/Label
 
 @export var map_height := 128
 @export var map_width := 256	
@@ -17,17 +16,16 @@ extends Node2D
 @export_range(0.0, 1.0) var mountain_peak_threshold = 0.5
 
 
+
 func _ready() -> void:
 	generate_map()
-	
-	
+
 func generate_map() -> void:
 	var perlin_noise = FastNoiseLite.new()
 	perlin_noise.seed = randi()
 	perlin_noise.noise_type = FastNoiseLite.TYPE_PERLIN
 	perlin_noise.frequency = noise_scale
 	
-	seed_label.text = "Seed: %s" % perlin_noise.seed
 	
 	tile_map_layer.clear()
 	
@@ -53,5 +51,4 @@ func generate_map() -> void:
 				atlas_coords = Vector2i(1, 0)
 			elif noise_value <= mountain_peak_threshold:
 				atlas_coords = Vector2i(0, 0)
-			
 			tile_map_layer.set_cell(tile_pos, 0, atlas_coords)

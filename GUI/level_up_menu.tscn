@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://brijvvka2nsqc" path="res://GUI/level_up_menu.gd" id="1_ib382"]
 
 [node name="LevelUpMenu" type="CanvasLayer" unique_id=699942841]
+process_mode = 3
 script = ExtResource("1_ib382")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=889265446]
@@ -28,17 +29,19 @@ alignment = 1
 
 [node name="Button1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2137055442]
 layout_mode = 2
-text = "+ Damage"
+action_mode = 0
+text = "+ Range"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1250525363]
 layout_mode = 2
+action_mode = 0
 text = "+ Attack Speed"
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1036072495]
 layout_mode = 2
+action_mode = 0
 text = "+ Movement Speed"
 
-[connection signal="choice_made" from="." to="." method="_on_choice_made"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

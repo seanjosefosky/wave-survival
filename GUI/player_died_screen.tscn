@@ -35,7 +35,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
-text = "High Score: 0"
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=85001298]
 custom_minimum_size = Vector2(0, 50)

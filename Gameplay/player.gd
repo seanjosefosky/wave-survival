@@ -62,9 +62,9 @@ func xp_collect() -> void:
 		level_up()
 
 func level_up() -> void:
+	xp_needed += 10
+	xp = 0
 	get_tree().paused = true
 	var level_up_menu = preload("res://GUI/level_up_menu.tscn").instantiate()
 	get_node("/root/World").add_child(level_up_menu)
-	xp_needed += 10
-	xp = 0
-	
+	level_up_menu.setup(self, $Weapon)

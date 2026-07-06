@@ -2,10 +2,10 @@ class_name Bullet
 extends Area2D
 	
 const SPEED = 1000
-const RANGE = 1200
-	
+const RANGE = 1200	
+
 var travelled_distance = 0
-var damage := 5.0
+var damage: float
 	
 func _physics_process(delta):
 	var direction := Vector2.RIGHT.rotated(rotation)

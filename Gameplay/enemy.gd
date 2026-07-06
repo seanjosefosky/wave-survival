@@ -17,15 +17,14 @@ func take_damage(dmg):
 	animation.play("take_damage")
 	health -= dmg
 	if health <= 0:
-		spawn_xp()
+		var pos := global_position
+		spawn_xp(pos)
 		queue_free()
-		PlayerGlobals.kills += 1
 
-func spawn_xp() -> void:
-	var pos := global_position
+func spawn_xp(pos) -> void:
 	var xp_drop = preload("uid://bdecn072k6arv").instantiate()
 	xp_drop.position = pos
-	get_node("/root/World").add_child(xp_drop)
+	get_node("/root/World").call_deferred("add_child", xp_drop)
 
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

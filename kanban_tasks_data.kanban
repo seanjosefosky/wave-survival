@@ -11,16 +11,15 @@
 			"uuid": "450fdd9c-a197-4519-ba27-d2c2c54b6498",
 			"title": "Todo",
 			"tasks": [
-				"e211bc11-2237-454a-ac50-8029c7a2f374",
-				"9a42b74d-e1c4-4d2e-98ee-032186e58254"
+				"9a42b74d-e1c4-4d2e-98ee-032186e58254",
+				"17287b18-3609-4995-baa2-396cb29e32e7",
+				"0254f47f-a483-407b-a865-a4d126bba862"
 			]
 		},
 		{
 			"uuid": "482a56a0-5e9c-4f68-93df-fbd3677b6d27",
 			"title": "In Progress",
-			"tasks": [
-				"fedad193-d1f6-44ca-bdec-afb43ccd16f9"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "dc31c799-25d7-46c8-9ed9-56c4128e2d21",
@@ -32,7 +31,9 @@
 				"f471987e-160c-41d0-a1df-197d1e86fc2d",
 				"bab80d53-4f07-4c76-9ce6-1e37fde337ea",
 				"014c5740-79ac-4d2d-9d93-492209fd5fcd",
-				"25810f5c-f35b-4c15-943e-be0a37e55b2c"
+				"25810f5c-f35b-4c15-943e-be0a37e55b2c",
+				"fedad193-d1f6-44ca-bdec-afb43ccd16f9",
+				"e211bc11-2237-454a-ac50-8029c7a2f374"
 			]
 		}
 	],
@@ -110,6 +111,20 @@
 		{
 			"uuid": "9a42b74d-e1c4-4d2e-98ee-032186e58254",
 			"title": "Level Up Choices randomized",
+			"description": "",
+			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"steps": []
+		},
+		{
+			"uuid": "17287b18-3609-4995-baa2-396cb29e32e7",
+			"title": "Kill Screen Stats",
+			"description": "",
+			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"steps": []
+		},
+		{
+			"uuid": "0254f47f-a483-407b-a865-a4d126bba862",
+			"title": "Add more enemies",
 			"description": "",
 			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
 			"steps": []

@@ -5,7 +5,7 @@ extends Node2D
 func _ready() -> void:
 	get_tree().paused = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$UI/XPBar.value = player.xp
 	$UI/XPBar.max_value = player.xp_needed
 	
