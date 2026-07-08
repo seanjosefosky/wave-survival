@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dehljd47hc86v"]
 
 [ext_resource type="Script" uid="uid://c2ly8dypx4xh0" path="res://Gameplay/world.gd" id="1_036b0"]
-[ext_resource type="PackedScene" uid="uid://c6uk8ka7fb3lc" path="res://Gameplay/player.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://dvrmdrf3oxari" path="res://Gameplay/enemy_spawner.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://c6uk8ka7fb3lc" path="res://Gameplay/Entities/Player/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://dvrmdrf3oxari" path="res://Gameplay/Entities/Enemies/enemy_spawner.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://cl2rijst0a8oe" path="res://map_generator.tscn" id="2_ygxdd"]
 [ext_resource type="Texture2D" uid="uid://cb7l8rjfukvxs" path="res://Textures/XpUnder.png" id="6_7rl1c"]
 [ext_resource type="PackedScene" uid="uid://ca8ls7k38visy" path="res://GUI/pause_menu.tscn" id="6_dwbse"]
@@ -13,6 +13,7 @@ script = ExtResource("1_036b0")
 player = NodePath("Player")
 
 [node name="MapGenerator" parent="." unique_id=1828262691 instance=ExtResource("2_ygxdd")]
+visible = false
 
 [node name="Player" parent="." unique_id=783083630 instance=ExtResource("1_f3sb7")]
 position = Vector2(1065, 566)

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://d0mkv5g6xaiey"]
+
+[ext_resource type="Script" uid="uid://cc7bgjj7x2mcl" path="res://Gameplay/Entities/Characters/character_stats_base.gd" id="1_ovpq2"]
+[ext_resource type="Texture2D" uid="uid://clq5j3k6t218a" path="res://Gameplay/Entities/Characters/Warrior/Warrior_Spritesheet.png" id="2_si835"]
+
+[resource]
+script = ExtResource("1_ovpq2")
+name = "Warrior"
+sprite = ExtResource("2_si835")
+max_health = 150
+health_regen = 1.0
+move_speed = 100.0
+armor = 2
+strength = 3
+projectile_speed = 1.0
+weapon_effect_duration = 1.0
+cooldown = 1.0
+luck = 1.0
+xp_bonus = 1.0
+xp_pickup_radius = 1.0
+metadata/_custom_type_script = "uid://cc7bgjj7x2mcl"

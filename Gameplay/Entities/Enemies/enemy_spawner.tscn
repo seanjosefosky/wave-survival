@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvrmdrf3oxari"]
 
-[ext_resource type="Script" uid="uid://8ecvafkj4yml" path="res://Gameplay/enemy_spawner.gd" id="1_ewhtn"]
+[ext_resource type="Script" uid="uid://8ecvafkj4yml" path="res://Gameplay/Entities/Enemies/enemy_spawner.gd" id="1_ewhtn"]
 
 [sub_resource type="Curve" id="Curve_00s5r"]
 _limits = [0.5, 2.5, 0.0, 1200.0]

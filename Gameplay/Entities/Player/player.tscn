@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6uk8ka7fb3lc"]
 
-[ext_resource type="Script" uid="uid://cuut7s42sy0fv" path="res://Gameplay/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://dycqa4u32ryt7" path="res://Gameplay/weapon.tscn" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://cuut7s42sy0fv" path="res://Gameplay/Entities/Player/player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://dycqa4u32ryt7" path="res://Gameplay/Entities/Player/Weapons/weapon.tscn" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://doric8ef4ehpb" path="res://Textures/Barney.png" id="2_onrkg"]
 [ext_resource type="Texture2D" uid="uid://d0awgy7eoim7o" path="res://Textures/HealthOver.png" id="4_lfxdo"]
 [ext_resource type="Texture2D" uid="uid://hsbjch14k825" path="res://Textures/HealthUnder.png" id="5_ek8wa"]
@@ -76,6 +76,8 @@ collision_mask = 18
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_4flbx")
+health = null
+speed = null
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1283898887]
 zoom = Vector2(1.3, 1.3)
@@ -89,11 +91,11 @@ collision_mask = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1367723360]
 shape = SubResource("CircleShape2D_f88hd")
 
-[node name="XpBox" type="Area2D" parent="." unique_id=323229640]
+[node name="XpDetectionBox" type="Area2D" parent="." unique_id=323229640]
 collision_layer = 0
 collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="XpBox" unique_id=1590867124]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="XpDetectionBox" unique_id=1590867124]
 shape = SubResource("CircleShape2D_cv017")
 
 [node name="Weapon" parent="." unique_id=1147388600 instance=ExtResource("2_i3pqv")]
@@ -110,6 +112,8 @@ texture_progress = ExtResource("4_lfxdo")
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1696271104]
 texture_filter = 1
 texture = ExtResource("2_onrkg")
+region_enabled = true
+region_rect = Rect2(1, 0, 30, 32)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1713321972]
 libraries/ = SubResource("AnimationLibrary_8vtbx")

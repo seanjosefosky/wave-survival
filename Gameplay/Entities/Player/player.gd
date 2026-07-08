@@ -3,14 +3,15 @@ extends CharacterBody2D
 
 signal health_depleted
 
-@export var health := 10.0
-@export var speed := 100.0
-
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var hurt_box: Area2D = $HurtBox
-@onready var xp_box: Area2D = $XpBox
+@onready var xp_box: Area2D = $XpDetectionBox
 @onready var animation: AnimationPlayer = $AnimationPlayer
 @onready var player_sprite: Sprite2D = $PlayerSprite
+
+@export var stats: CharacterStats
+
+
 
 
 var xp := 0
@@ -18,15 +19,12 @@ var xp_needed := 5
 
 
 func _ready() -> void:
-	$HealthBar.value = health
-	$HealthBar.max_value = health
+	pass
 	
 func _physics_process(delta: float):
 	get_input()
 	move_and_slide()
 	take_damage(delta)
-	
-	PlayerGlobals.position = global_position
 	
 	
 		
@@ -37,7 +35,8 @@ func get_input():
 		"move_up", 
 		"move_down"
 	)
-	velocity = input_direction * speed
+	
+	velocity = input_direction * stats.speed
 
 func take_damage(delta: float) -> void:
 	const DAMAGE_RATE = 20.0

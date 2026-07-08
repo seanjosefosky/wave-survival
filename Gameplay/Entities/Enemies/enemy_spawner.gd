@@ -9,7 +9,7 @@ extends Node2D
 var play_time := 0
 
 func _physics_process(_delta: float) -> void:
-	global_position = PlayerGlobals.position
+	global_position = get_parent().find_child("Player").global_position
 	spawn_timer.wait_time = spawn_curve.sample(play_time)
 	
 func _on_spawn_timer_timeout() -> void:

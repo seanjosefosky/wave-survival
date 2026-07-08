@@ -13,11 +13,6 @@ config_version=5
 config/name="WaveSurvival"
 run/main_scene="uid://drmb12noedd7r"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
-
-[autoload]
-
-PlayerGlobals="*uid://bya5wj7qwtmng"
 
 [display]
 
