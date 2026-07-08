@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterStats" format=3 uid="uid://d0mkv5g6xaiey"]
 
-[ext_resource type="Script" uid="uid://cc7bgjj7x2mcl" path="res://Gameplay/Entities/Characters/character_stats_base.gd" id="1_ovpq2"]
-[ext_resource type="Texture2D" uid="uid://clq5j3k6t218a" path="res://Gameplay/Entities/Characters/Warrior/Warrior_Spritesheet.png" id="2_si835"]
+[ext_resource type="Script" uid="uid://cc7bgjj7x2mcl" path="res://Gameplay/Entities/Player/Characters/character_stats_base.gd" id="1_ovpq2"]
+[ext_resource type="Texture2D" uid="uid://clq5j3k6t218a" path="res://Gameplay/Entities/Player/Characters/Warrior/Warrior_Spritesheet.png" id="2_si835"]
 
 [resource]
 script = ExtResource("1_ovpq2")

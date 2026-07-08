@@ -1,9 +1,39 @@
 {
 	"categories": [
 		{
-			"uuid": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"title": "Task",
-			"color": "569eff"
+			"uuid": "2a810dc8-ae57-4167-9574-590311e68991",
+			"title": "Art",
+			"color": "4fdda4"
+		},
+		{
+			"uuid": "4d52664f-d368-4ac2-8e8e-070fb3a9d36f",
+			"title": "UI/UX",
+			"color": "21dc50"
+		},
+		{
+			"uuid": "152c95ca-4595-4cf2-a1c4-c57523dc8aff",
+			"title": "Bug",
+			"color": "ee2121"
+		},
+		{
+			"uuid": "ecb4dc8c-25e4-4c2e-acb3-856eae890878",
+			"title": "Refactor",
+			"color": "f38a2e"
+		},
+		{
+			"uuid": "864def4f-1be9-404e-a9e2-f045831ce057",
+			"title": "Optimization",
+			"color": "ede66d"
+		},
+		{
+			"uuid": "0e2111b2-ce2b-48d1-abba-317b0698a27c",
+			"title": "Polish",
+			"color": "b871e0"
+		},
+		{
+			"uuid": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
+			"title": "Design",
+			"color": "31d5e6"
 		}
 	],
 	"stages": [
@@ -11,11 +41,6 @@
 			"uuid": "450fdd9c-a197-4519-ba27-d2c2c54b6498",
 			"title": "Todo",
 			"tasks": [
-				"9a42b74d-e1c4-4d2e-98ee-032186e58254",
-				"17287b18-3609-4995-baa2-396cb29e32e7",
-				"2d82e106-e00f-4deb-b4da-eace35a17573",
-				"741581da-f0de-4217-a47f-262f5393d9c7",
-				"6b93841e-dc8c-48a0-91ad-08d1671ee647",
 				"70bfef3c-7c33-42d3-8360-810c314107aa",
 				"1cffe41d-9a59-4903-b026-d312733f474f"
 			]
@@ -50,140 +75,112 @@
 			"uuid": "f471987e-160c-41d0-a1df-197d1e86fc2d",
 			"title": "Enemies Drop Items",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "5460b4ea-81b6-4a73-93b1-8124f2cc6ccf",
 			"title": "Enemy Spawn Curve",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "d055df09-c15c-447a-89fd-9fca20f639f0",
 			"title": "Bullets Kill enemies",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "3ec1f8a4-20f7-4576-b424-341b97581eb9",
 			"title": "Kill Count Increases",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "bab80d53-4f07-4c76-9ce6-1e37fde337ea",
 			"title": "XP bar",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "4d52664f-d368-4ac2-8e8e-070fb3a9d36f",
 			"steps": []
 		},
 		{
 			"uuid": "fedad193-d1f6-44ca-bdec-afb43ccd16f9",
 			"title": "Level Up Menu Working Buttons",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "4d52664f-d368-4ac2-8e8e-070fb3a9d36f",
 			"steps": []
 		},
 		{
 			"uuid": "eafe12be-3b0d-4e83-b8bb-7fea8a00189b",
 			"title": "New task",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "2a810dc8-ae57-4167-9574-590311e68991",
 			"steps": []
 		},
 		{
 			"uuid": "e211bc11-2237-454a-ac50-8029c7a2f374",
 			"title": "XP Drop Errors",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "152c95ca-4595-4cf2-a1c4-c57523dc8aff",
 			"steps": []
 		},
 		{
 			"uuid": "014c5740-79ac-4d2d-9d93-492209fd5fcd",
 			"title": "Enemy Damaged Sprite",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "2a810dc8-ae57-4167-9574-590311e68991",
 			"steps": []
 		},
 		{
 			"uuid": "25810f5c-f35b-4c15-943e-be0a37e55b2c",
 			"title": "Player Damaged Sprite",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"steps": []
-		},
-		{
-			"uuid": "9a42b74d-e1c4-4d2e-98ee-032186e58254",
-			"title": "Level Up Choices randomized",
-			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"steps": []
-		},
-		{
-			"uuid": "17287b18-3609-4995-baa2-396cb29e32e7",
-			"title": "Kill Screen Stats",
-			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"steps": []
-		},
-		{
-			"uuid": "2d82e106-e00f-4deb-b4da-eace35a17573",
-			"title": "Damage hit splats",
-			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"steps": []
-		},
-		{
-			"uuid": "741581da-f0de-4217-a47f-262f5393d9c7",
-			"title": "Xp floats to Player",
-			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "2a810dc8-ae57-4167-9574-590311e68991",
 			"steps": []
 		},
 		{
 			"uuid": "1cffe41d-9a59-4903-b026-d312733f474f",
-			"title": "Refactor Base Weapon",
+			"title": "Weapon Base Class",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
-			"steps": []
-		},
-		{
-			"uuid": "6b93841e-dc8c-48a0-91ad-08d1671ee647",
-			"title": "Add other Weapons",
-			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "4c3d8ac2-c3e7-4273-9292-2f63fc02f082",
 			"title": "Make Class/Resource for Base Character Data",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "70bfef3c-7c33-42d3-8360-810c314107aa",
-			"title": "Refactor Enemy Base",
+			"title": "Enemy Base Class",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		},
 		{
 			"uuid": "d4a32c9b-d9cf-47b5-a2ec-9ef43ee57067",
 			"title": "Remove Player Globals",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "864def4f-1be9-404e-a9e2-f045831ce057",
 			"steps": []
 		},
 		{
 			"uuid": "2feaba3c-783e-4e4d-9b81-363e44726f37",
-			"title": "Refactor Player to work with Character Resources",
+			"title": "Player components and Resources",
+			"description": "Since adding Resources, Player now needs a big overhaul. \nNeed to create dedicated component scripts, remove duplicate code.",
+			"category": "ecb4dc8c-25e4-4c2e-acb3-856eae890878",
+			"steps": []
+		},
+		{
+			"uuid": "cb949e7d-984f-43ab-8558-b4ecd233aa85",
+			"title": "",
 			"description": "",
-			"category": "081c57eb-3964-44b5-b54d-0f3aecf99bc3",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
 		}
 	],

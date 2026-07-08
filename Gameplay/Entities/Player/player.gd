@@ -1,22 +1,12 @@
 class_name Player
 extends CharacterBody2D
 
-signal health_depleted
-
-@onready var anim_player: AnimationPlayer = $AnimationPlayer
-@onready var hurt_box: Area2D = $HurtBox
-@onready var xp_box: Area2D = $XpDetectionBox
-@onready var animation: AnimationPlayer = $AnimationPlayer
-@onready var player_sprite: Sprite2D = $PlayerSprite
-
 @export var stats: CharacterStats
 
-
-
-
+var health = stats.max_health
 var xp := 0
 var xp_needed := 5
-
+var level := 1
 
 func _ready() -> void:
 	pass
@@ -24,10 +14,9 @@ func _ready() -> void:
 func _physics_process(delta: float):
 	get_input()
 	move_and_slide()
-	take_damage(delta)
 	
+	#TODO: player death -> get_tree().change_scene_to_file("uid://dp0h2ayn1r6dw")
 	
-		
 func get_input():
 	var input_direction = Input.get_vector(
 		"move_left", 
@@ -35,28 +24,10 @@ func get_input():
 		"move_up", 
 		"move_down"
 	)
-	
 	velocity = input_direction * stats.speed
 
-func take_damage(delta: float) -> void:
-	const DAMAGE_RATE = 20.0
-	var overlapping_mobs = hurt_box.get_overlapping_bodies()
-	
-	if overlapping_mobs:
-		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		if health >= 0.0:
-			health_depleted.emit()
-			animation.play("take_damage")
-			$HealthBar.value = health
-		elif health <= 0:
-			get_tree().change_scene_to_file("uid://dp0h2ayn1r6dw")
-			
-	elif not overlapping_mobs:
-		animation.play("normal")
-		animation.stop()
-		
 func xp_collect() -> void:
-	xp += 1
+	stats.xp += 1
 	if xp == xp_needed:
 		level_up()
 
