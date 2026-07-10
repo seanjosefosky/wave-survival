@@ -3,7 +3,9 @@ extends CharacterBody2D
 
 @export var stats: CharacterStats
 
-var health = stats.max_health
+@onready var health = stats.max_health
+@onready var speed = stats.move_speed
+
 var xp := 0
 var xp_needed := 5
 var level := 1
@@ -24,14 +26,15 @@ func get_input():
 		"move_up", 
 		"move_down"
 	)
-	velocity = input_direction * stats.speed
+	velocity = input_direction * speed
 
 func xp_collect() -> void:
-	stats.xp += 1
+	xp += 1
 	if xp == xp_needed:
 		level_up()
 
 func level_up() -> void:
+	level += 1
 	xp_needed += 10
 	xp = 0
 	get_tree().paused = true
