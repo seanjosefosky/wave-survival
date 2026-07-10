@@ -42,31 +42,33 @@
 			"title": "Todo",
 			"tasks": [
 				"70bfef3c-7c33-42d3-8360-810c314107aa",
-				"1cffe41d-9a59-4903-b026-d312733f474f"
+				"1cffe41d-9a59-4903-b026-d312733f474f",
+				"6f8f8ae3-31ad-43a1-8559-e08f5efbf9fe",
+				"e1a37b73-7fc1-416e-8bc2-c7caf31d8525",
+				"3f4787ff-c1e6-412e-81cf-8dad44c5c329"
 			]
 		},
 		{
 			"uuid": "482a56a0-5e9c-4f68-93df-fbd3677b6d27",
 			"title": "In Progress",
-			"tasks": [
-				"2feaba3c-783e-4e4d-9b81-363e44726f37"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "dc31c799-25d7-46c8-9ed9-56c4128e2d21",
 			"title": "Done",
 			"tasks": [
-				"d055df09-c15c-447a-89fd-9fca20f639f0",
-				"3ec1f8a4-20f7-4576-b424-341b97581eb9",
-				"5460b4ea-81b6-4a73-93b1-8124f2cc6ccf",
-				"f471987e-160c-41d0-a1df-197d1e86fc2d",
-				"bab80d53-4f07-4c76-9ce6-1e37fde337ea",
-				"014c5740-79ac-4d2d-9d93-492209fd5fcd",
-				"25810f5c-f35b-4c15-943e-be0a37e55b2c",
-				"d4a32c9b-d9cf-47b5-a2ec-9ef43ee57067",
-				"fedad193-d1f6-44ca-bdec-afb43ccd16f9",
+				"2feaba3c-783e-4e4d-9b81-363e44726f37",
+				"4c3d8ac2-c3e7-4273-9292-2f63fc02f082",
 				"e211bc11-2237-454a-ac50-8029c7a2f374",
-				"4c3d8ac2-c3e7-4273-9292-2f63fc02f082"
+				"fedad193-d1f6-44ca-bdec-afb43ccd16f9",
+				"d4a32c9b-d9cf-47b5-a2ec-9ef43ee57067",
+				"25810f5c-f35b-4c15-943e-be0a37e55b2c",
+				"014c5740-79ac-4d2d-9d93-492209fd5fcd",
+				"bab80d53-4f07-4c76-9ce6-1e37fde337ea",
+				"f471987e-160c-41d0-a1df-197d1e86fc2d",
+				"5460b4ea-81b6-4a73-93b1-8124f2cc6ccf",
+				"3ec1f8a4-20f7-4576-b424-341b97581eb9",
+				"d055df09-c15c-447a-89fd-9fca20f639f0"
 			]
 		}
 	],
@@ -174,10 +176,47 @@
 			"title": "Player components and Resources",
 			"description": "Since adding Resources, Player now needs a big overhaul. \nNeed to create dedicated component scripts, remove duplicate code.",
 			"category": "ecb4dc8c-25e4-4c2e-acb3-856eae890878",
-			"steps": []
+			"steps": [
+				{
+					"details": "Shoot closest enemy",
+					"done": true
+				},
+				{
+					"details": "hurtbox component\n",
+					"done": true
+				}
+			]
 		},
 		{
 			"uuid": "cb949e7d-984f-43ab-8558-b4ecd233aa85",
+			"title": "",
+			"description": "",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
+			"steps": []
+		},
+		{
+			"uuid": "6f8f8ae3-31ad-43a1-8559-e08f5efbf9fe",
+			"title": "Damage taken based on Enemy, instead of the current flat value",
+			"description": "",
+			"category": "ecb4dc8c-25e4-4c2e-acb3-856eae890878",
+			"steps": []
+		},
+		{
+			"uuid": "e1a37b73-7fc1-416e-8bc2-c7caf31d8525",
+			"title": "Enemy Spawner not using path",
+			"description": "",
+			"category": "ecb4dc8c-25e4-4c2e-acb3-856eae890878",
+			"steps": []
+		},
+		{
+			"uuid": "3f4787ff-c1e6-412e-81cf-8dad44c5c329",
+			"title": "Player Health Regen",
+			"description": "",
+			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
+			"steps": []
+		},
+		{
+			"uuid": "ec717953-49ee-48a0-9f28-77b597e249e8",
 			"title": "",
 			"description": "",
 			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",

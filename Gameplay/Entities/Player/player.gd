@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 @onready var health = stats.max_health
 @onready var speed = stats.move_speed
+@onready var health_bar: TextureProgressBar = $HealthBar
 
 var xp := 0
 var xp_needed := 5
@@ -16,8 +17,6 @@ func _ready() -> void:
 func _physics_process(delta: float):
 	get_input()
 	move_and_slide()
-	
-	#TODO: player death -> get_tree().change_scene_to_file("uid://dp0h2ayn1r6dw")
 	
 func get_input():
 	var input_direction = Input.get_vector(
@@ -41,3 +40,16 @@ func level_up() -> void:
 	var level_up_menu = preload("res://GUI/level_up_menu.tscn").instantiate()
 	get_node("/root/World").add_child(level_up_menu)
 	level_up_menu.setup(self, $Weapon)
+
+func apply_damage(amount):
+	health -= amount
+	if health <= 0:
+		death()
+	
+func death() -> void:
+	# TODO: Death Animation
+	get_tree().paused = true
+	
+	var death_menu = preload("res://GUI/player_died_screen.tscn").instantiate()
+	get_node("/root/World").add_child(death_menu)
+	

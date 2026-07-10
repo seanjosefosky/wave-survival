@@ -9,15 +9,15 @@ func setup(p, w):
 	weapon = w
 
 func _on_button_1_pressed() -> void:
-	weapon.enemy_detection.shape.radius *= 1.1
+	weapon.enemy_detection.shape.radius *= 1.2
 	_choice_made()
 	
 func _on_button_2_pressed() -> void:
-	weapon.attack_speed *= 1.1
+	weapon.attack_speed *= 1.2
 	_choice_made()
 	
 func _on_button_3_pressed() -> void:
-	player.speed *= 1.1
+	player.speed *= 1.2
 	_choice_made()
 	
 func _choice_made() -> void:

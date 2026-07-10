@@ -4,14 +4,14 @@
 
 [sub_resource type="Curve" id="Curve_00s5r"]
 _limits = [0.5, 2.5, 0.0, 1200.0]
-_data = [Vector2(0, 2.1000001), 0.0, 0.0, 0, 0, Vector2(606.0606, 0.5), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 1.3314607), 0.0, 0.0, 0, 0, Vector2(606.0606, 0.5), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve2D" id="Curve2D_furxd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -39.022095, -176.5066, 0, 0, 0, 0, -237.94368, -174.17416, 0, 0, 0, 0, -316.0282, -178.83907, 0, 0, 0, 0, -365.71826, -177.67284, 0, 0, 0, 0, -373.4704, 236.33775, 0, 0, 0, 0, -264.30988, 236.33775, 0, 0, 0, 0, -137, 234, 0, 0, 0, 0, 23, 248, 0, 0, 0, 0, 139, 234, -0.7447157, 8.963863, 0.7447157, -8.963863, 325.32718, 242.16887, 0, 0, 0, 0, 328.6495, 88.22691, 0, 0, 0, 0, 318.6825, -107.69922, 0, 0, 0, 0, 316.46765, -170.67548, 0, 0, 0, 0, 218, -185, 0, 0, 0, 0, 171, -181, 0, 0, 0, 0, -37.914658, -177.67284)
+"points": PackedVector2Array(0, 0, 0, 0, -211, -204, 0, 0, 0, 0, -216, 229, 0, 0, 0, 0, 243, 242, 0, 0, 0, 0, 240, -204, 0, 0, 0, 0, -209, -206, 0, 0, 0, 0, -211, -204)
 }
-point_count = 16
+point_count = 6
 
 [node name="EnemySpawner" type="Node2D" unique_id=853304565]
 script = ExtResource("1_ewhtn")
@@ -28,8 +28,8 @@ autostart = true
 curve = SubResource("Curve2D_furxd")
 
 [node name="EnemySpawn" type="PathFollow2D" parent="SpawnPath" unique_id=1186447113]
-position = Vector2(-39.022095, -176.5066)
-rotation = 3.1298678
+position = Vector2(-211, -204)
+rotation = 1.5823431
 
 [connection signal="timeout" from="PlayTime" to="." method="_on_play_time_timeout"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

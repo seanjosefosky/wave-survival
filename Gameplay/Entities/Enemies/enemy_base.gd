@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var player := get_node("/root/World/Player")
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
-var speed := 55.0
+var speed := randf_range(50.0, 60.0)
 var health := 10.0
 
 

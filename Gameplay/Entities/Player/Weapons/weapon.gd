@@ -14,9 +14,21 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	var enemies_in_range = get_overlapping_bodies()
-	if enemies_in_range.size() > 0:
-		var target_enemy: Enemy = enemies_in_range.front()
-		look_at(target_enemy.global_position)
+	if enemies_in_range.size() == 0:
+		return
+
+	var closest_enemy: Enemy = null
+	var closest_dist := INF
+
+	for enemy in enemies_in_range:
+		var dist = global_position.distance_to(enemy.global_position)
+		if dist < closest_dist:
+			closest_dist = dist
+			closest_enemy = enemy
+
+	if closest_enemy:
+		look_at(closest_enemy.global_position)
+
 		
 
 func shoot() -> void:

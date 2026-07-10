@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://fqnxhhtlt52w" path="res://Gameplay/Entities/Enemies/enemy_base.gd" id="1_fwgtn"]
 [ext_resource type="Texture2D" uid="uid://bakr5rtfcnpyr" path="res://Textures/BadGuy.png" id="2_x65lx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1qorr"]
-radius = 12.0
-
 [sub_resource type="Animation" id="Animation_rgfr3"]
 resource_name = "normal"
 loop_mode = 1
@@ -44,15 +41,15 @@ _data = {
 &"take_damage": SubResource("Animation_1qorr")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1qorr"]
+radius = 13.0
+
 [node name="Enemy" type="CharacterBody2D" unique_id=2070332676]
 z_index = 5
 collision_layer = 2
-collision_mask = 23
+collision_mask = 31
 platform_on_leave = 2
 script = ExtResource("1_fwgtn")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1505148138]
-shape = SubResource("CircleShape2D_1qorr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514615086]
 texture_filter = 1
@@ -61,5 +58,8 @@ texture = ExtResource("2_x65lx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=7654136]
 libraries/ = SubResource("AnimationLibrary_rgfr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1505148138]
+shape = SubResource("CircleShape2D_1qorr")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

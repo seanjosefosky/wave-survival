@@ -30,17 +30,17 @@ alignment = 1
 [node name="Button1" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2137055442]
 layout_mode = 2
 action_mode = 0
-text = "+ Range"
+text = "Bullet Range +20%"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1250525363]
 layout_mode = 2
 action_mode = 0
-text = "+ Attack Speed"
+text = "Attack Speed +20%"
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1036072495]
 layout_mode = 2
 action_mode = 0
-text = "+ Movement Speed"
+text = "Movement Speed +20%"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

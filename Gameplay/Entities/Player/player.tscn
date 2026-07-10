@@ -8,16 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://d0awgy7eoim7o" path="res://Textures/HealthOver.png" id="4_lfxdo"]
 [ext_resource type="Texture2D" uid="uid://hsbjch14k825" path="res://Textures/HealthUnder.png" id="5_ek8wa"]
 [ext_resource type="Texture2D" uid="uid://jt26wtj1r15s" path="res://Textures/PlayerDamaged.png" id="6_ek8wa"]
+[ext_resource type="Script" uid="uid://b1e4cmr8c15sc" path="res://Gameplay/Entities/Player/health_bar.gd" id="7_cxed1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
-radius = 15.0
+radius = 16.0
 height = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f88hd"]
-radius = 17.029387
+radius = 16.27882
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cv017"]
-radius = 17.0
+radius = 16.0
 
 [sub_resource type="Animation" id="Animation_ehowo"]
 length = 0.001
@@ -74,22 +75,22 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" unique_id=783083630]
 z_index = 5
-collision_mask = 18
+collision_mask = 16
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_4flbx")
 stats = ExtResource("2_rf6io")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1283898887]
-zoom = Vector2(1.3, 1.3)
+zoom = Vector2(1.5, 1.5)
 
 [node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=451387983]
 shape = SubResource("CapsuleShape2D_4flbx")
 
-[node name="HurtBox" type="Area2D" parent="." unique_id=1869250214 node_paths=PackedStringArray("player")]
-collision_mask = 10
+[node name="HurtBox" type="Area2D" parent="." unique_id=1869250214]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("2_mouiw")
-player = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=1367723360]
 shape = SubResource("CircleShape2D_f88hd")
@@ -103,14 +104,16 @@ shape = SubResource("CircleShape2D_cv017")
 
 [node name="Weapon" parent="." unique_id=1147388600 instance=ExtResource("2_i3pqv")]
 
-[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=67875107]
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=67875107 node_paths=PackedStringArray("player")]
 texture_filter = 1
 offset_left = -16.0
-offset_top = -25.0
+offset_top = -24.0
 offset_right = 16.0
-offset_bottom = 7.0
+offset_bottom = 8.0
 texture_under = ExtResource("5_ek8wa")
 texture_progress = ExtResource("4_lfxdo")
+script = ExtResource("7_cxed1")
+player = NodePath("..")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1696271104]
 texture_filter = 1
