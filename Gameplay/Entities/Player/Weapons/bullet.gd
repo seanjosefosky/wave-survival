@@ -1,7 +1,7 @@
 class_name Bullet
 extends Area2D
 	
-const SPEED = 1000
+const SPEED = 500
 const RANGE = 1200	
 
 var travelled_distance = 0
@@ -19,4 +19,5 @@ func _physics_process(delta):
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
+		print(damage)
 	queue_free()

@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dycqa4u32ryt7"]
 
-[ext_resource type="Script" uid="uid://ct5uw3oxckqy8" path="res://Gameplay/Entities/Player/Weapons/weapon.gd" id="1_swcir"]
+[ext_resource type="Script" uid="uid://ct5uw3oxckqy8" path="res://Gameplay/Entities/Player/Weapons/weapon_base.gd" id="1_nv038"]
+[ext_resource type="Resource" uid="uid://byo3qwti4n1k2" path="res://Gameplay/Entities/Player/Weapons/Active/pea_shooter.tres" id="2_a6xh7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cv017"]
 radius = 172.00291
 
-[node name="Weapon" type="Area2D" unique_id=1147388600]
+[node name="WeaponBase" type="Area2D" unique_id=1147388600]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_swcir")
+script = ExtResource("1_nv038")
+stats = ExtResource("2_a6xh7")
 
 [node name="EnemyDetection" type="CollisionShape2D" parent="." unique_id=820465116]
 shape = SubResource("CircleShape2D_cv017")
@@ -20,6 +22,5 @@ autostart = true
 [node name="WeaponPivot" type="Marker2D" parent="." unique_id=1840502883]
 
 [node name="ShootingPoint" type="Marker2D" parent="WeaponPivot" unique_id=1194116835]
-position = Vector2(2, 0)
 
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

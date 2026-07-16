@@ -8,6 +8,8 @@ class_name CharacterStats extends Resource
 @export var move_speed: float
 @export var armor: int
 
+@export var default_weapon: WeaponStats
+@export var weapons: Array[WeaponStats]
 @export var strength: int
 @export var projectile_speed: float
 @export var bonus_projectiles: int

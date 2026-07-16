@@ -41,8 +41,6 @@
 			"uuid": "450fdd9c-a197-4519-ba27-d2c2c54b6498",
 			"title": "Todo",
 			"tasks": [
-				"70bfef3c-7c33-42d3-8360-810c314107aa",
-				"1cffe41d-9a59-4903-b026-d312733f474f",
 				"6f8f8ae3-31ad-43a1-8559-e08f5efbf9fe",
 				"e1a37b73-7fc1-416e-8bc2-c7caf31d8525",
 				"3f4787ff-c1e6-412e-81cf-8dad44c5c329"
@@ -51,7 +49,11 @@
 		{
 			"uuid": "482a56a0-5e9c-4f68-93df-fbd3677b6d27",
 			"title": "In Progress",
-			"tasks": []
+			"tasks": [
+				"70bfef3c-7c33-42d3-8360-810c314107aa",
+				"1cffe41d-9a59-4903-b026-d312733f474f",
+				"f0ee5c7d-8500-47f6-939d-27686323b700"
+			]
 		},
 		{
 			"uuid": "dc31c799-25d7-46c8-9ed9-56c4128e2d21",
@@ -216,8 +218,8 @@
 			"steps": []
 		},
 		{
-			"uuid": "ec717953-49ee-48a0-9f28-77b597e249e8",
-			"title": "",
+			"uuid": "f0ee5c7d-8500-47f6-939d-27686323b700",
+			"title": "Projectile Base Class",
 			"description": "",
 			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c6uk8ka7fb3lc"]
 
 [ext_resource type="Script" uid="uid://cuut7s42sy0fv" path="res://Gameplay/Entities/Player/player.gd" id="1_4flbx"]
-[ext_resource type="PackedScene" uid="uid://dycqa4u32ryt7" path="res://Gameplay/Entities/Player/Weapons/weapon.tscn" id="2_i3pqv"]
 [ext_resource type="Script" uid="uid://clrglhsonodv7" path="res://Gameplay/Entities/Player/Components/hurt_box.gd" id="2_mouiw"]
 [ext_resource type="Texture2D" uid="uid://doric8ef4ehpb" path="res://Textures/Barney.png" id="2_onrkg"]
 [ext_resource type="Resource" uid="uid://d0mkv5g6xaiey" path="res://Gameplay/Entities/Player/Characters/Warrior/Warrior.tres" id="2_rf6io"]
@@ -19,6 +18,8 @@ radius = 16.27882
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cv017"]
 radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_63tsw"]
 
 [sub_resource type="Animation" id="Animation_ehowo"]
 length = 0.001
@@ -81,11 +82,13 @@ platform_on_leave = 2
 script = ExtResource("1_4flbx")
 stats = ExtResource("2_rf6io")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1283898887]
+[node name="Camera" type="Camera2D" parent="." unique_id=1283898887]
 zoom = Vector2(1.5, 1.5)
 
-[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=451387983]
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=451387983]
 shape = SubResource("CapsuleShape2D_4flbx")
+
+[node name="Weapons" type="Node2D" parent="." unique_id=1253882075]
 
 [node name="HurtBox" type="Area2D" parent="." unique_id=1869250214]
 collision_layer = 0
@@ -102,7 +105,12 @@ collision_mask = 32
 [node name="CollisionShape2D" type="CollisionShape2D" parent="XpDetectionBox" unique_id=1590867124]
 shape = SubResource("CircleShape2D_cv017")
 
-[node name="Weapon" parent="." unique_id=1147388600 instance=ExtResource("2_i3pqv")]
+[node name="EnemyDetection" type="Area2D" parent="." unique_id=1504909741]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetection" unique_id=173619409]
+shape = SubResource("CircleShape2D_63tsw")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=67875107 node_paths=PackedStringArray("player")]
 texture_filter = 1

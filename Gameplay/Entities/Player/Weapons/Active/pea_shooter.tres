@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="WeaponStats" format=3 uid="uid://byo3qwti4n1k2"]
+
+[ext_resource type="Script" uid="uid://cjnpin68xe0ei" path="res://Gameplay/Entities/Player/Weapons/weapon_stats.gd" id="1_o2dji"]
+
+[resource]
+script = ExtResource("1_o2dji")
+rarity = 1.0
+max_damage = 10
+max_level = 3
+attack_speed = 1.0
+crit_chance = 1.0
+crit_multiplier = 1.5
+metadata/_custom_type_script = "uid://cjnpin68xe0ei"

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c6uk8ka7fb3lc" path="res://Gameplay/Entities/Player/player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://dvrmdrf3oxari" path="res://Gameplay/Entities/Enemies/enemy_spawner.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://cl2rijst0a8oe" path="res://map_generator.tscn" id="2_ygxdd"]
+[ext_resource type="PackedScene" uid="uid://dycqa4u32ryt7" path="res://Gameplay/Entities/Player/Weapons/weapon_base.tscn" id="4_qxq2p"]
 [ext_resource type="Texture2D" uid="uid://da74gir6epql5" path="res://GUI/XP Bar/xp_bar(Under) _0001.png" id="6_7rl1c"]
 [ext_resource type="PackedScene" uid="uid://ca8ls7k38visy" path="res://GUI/pause_menu.tscn" id="6_dwbse"]
 [ext_resource type="Script" uid="uid://dnhhecjq4gdj0" path="res://Gameplay/ui_canvas.gd" id="6_onu7j"]
@@ -19,6 +20,8 @@ map_width = 500
 
 [node name="Player" parent="." unique_id=783083630 instance=ExtResource("1_f3sb7")]
 position = Vector2(1065, 566)
+
+[node name="WeaponBase" parent="Player" unique_id=1147388600 instance=ExtResource("4_qxq2p")]
 
 [node name="EnemySpawner" parent="." unique_id=853304565 node_paths=PackedStringArray("enemies") instance=ExtResource("2_fj7yv")]
 enemies = NodePath("../Enemies")

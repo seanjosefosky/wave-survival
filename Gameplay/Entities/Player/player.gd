@@ -11,13 +11,14 @@ var xp := 0
 var xp_needed := 5
 var level := 1
 
+
 func _ready() -> void:
 	pass
-	
+
 func _physics_process(delta: float):
 	get_input()
 	move_and_slide()
-	
+
 func get_input():
 	var input_direction = Input.get_vector(
 		"move_left", 
@@ -45,11 +46,10 @@ func apply_damage(amount):
 	health -= amount
 	if health <= 0:
 		death()
-	
+
 func death() -> void:
 	# TODO: Death Animation
 	get_tree().paused = true
 	
 	var death_menu = preload("res://GUI/player_died_screen.tscn").instantiate()
 	get_node("/root/World").add_child(death_menu)
-	
