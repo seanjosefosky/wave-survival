@@ -113,6 +113,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_63tsw")
 
 [node name="HealthBar" type="TextureProgressBar" parent="." unique_id=67875107 node_paths=PackedStringArray("player")]
+z_index = 5
 texture_filter = 1
 offset_left = -16.0
 offset_top = -24.0

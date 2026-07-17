@@ -1,4 +1,4 @@
-class_name Bullet
+class_name Projectile
 extends Area2D
 	
 const SPEED = 500

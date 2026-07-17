@@ -7,7 +7,7 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(delta: float) -> void:
 	var enemy_overlapping = get_overlapping_bodies()
-	var damage = 20.0
+	var damage = 30.0
 	
 	if enemy_overlapping:
 		player.apply_damage(damage * enemy_overlapping.size() * delta)

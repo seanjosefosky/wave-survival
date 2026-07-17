@@ -1,22 +1,25 @@
 class_name Enemy
 extends CharacterBody2D
 
+@export var stats: EnemyStats
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
 @onready var player := get_node("/root/World/Player")
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
-var speed := randf_range(50.0, 60.0)
-var health := 10.0
-
+func _ready() -> void:
+	sprite_2d.texture = stats.sprite
 
 func _physics_process(_delta):
-	var direction = global_position.direction_to(player.position)
-	velocity = direction * speed
+	var direction = (player.global_position - global_position).normalized()
+	velocity = direction * stats.speed
 	move_and_slide()
 
+## Handles enemy damage and death
 func take_damage(dmg):
 	animation.play("take_damage")
-	health -= dmg
-	if health <= 0:
+	stats.health -= dmg
+	if stats.health <= 0:
 		var pos := global_position
 		spawn_xp(pos)
 		queue_free()

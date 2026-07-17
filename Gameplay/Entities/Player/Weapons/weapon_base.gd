@@ -33,14 +33,14 @@ func get_closest_enemy() -> void:
 		
 func calculate_damage() -> float:
 	var damage: float
-	var base_damage: int = randi_range(0, stats.max_damage)
-	var roll_crit = randf_range(0, stats.crit_chance)
+	var initial_damage: int = randi_range(1, stats.max_damage)
+	var roll_crit = randf_range(0, 1)
 	
 	if roll_crit <= stats.crit_chance:
-		damage = base_damage * stats.crit_multiplier
+		damage = initial_damage * stats.crit_multiplier
 		print("CRIT")
 	else: 
-		damage = base_damage
+		damage = initial_damage
 		
 	return damage
 	
@@ -53,4 +53,4 @@ func shoot() -> void:
 	new_projectile.damage = calculate_damage()
 
 func _on_shoot_timer_timeout() -> void:
-	shoot()
+		shoot()

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c2eb18u0y45mh"]
 
 [ext_resource type="Script" uid="uid://fqnxhhtlt52w" path="res://Gameplay/Entities/Enemies/enemy_base.gd" id="1_fwgtn"]
-[ext_resource type="Texture2D" uid="uid://bakr5rtfcnpyr" path="res://Textures/BadGuy.png" id="2_x65lx"]
+[ext_resource type="Resource" uid="uid://d2rrfqmfemnf3" path="res://Gameplay/Entities/Enemies/Resources/red_face.tres" id="2_lkiiy"]
 
 [sub_resource type="Animation" id="Animation_rgfr3"]
 resource_name = "normal"
@@ -45,16 +45,17 @@ _data = {
 radius = 13.0
 
 [node name="Enemy" type="CharacterBody2D" unique_id=2070332676]
-z_index = 5
+z_index = 4
 collision_layer = 2
 collision_mask = 31
+floor_constant_speed = true
 platform_on_leave = 2
 script = ExtResource("1_fwgtn")
+stats = ExtResource("2_lkiiy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514615086]
 texture_filter = 1
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_x65lx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=7654136]
 libraries/ = SubResource("AnimationLibrary_rgfr3")

@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://o0o3bwswc4qg"]
 
-[ext_resource type="Script" uid="uid://2wj3tvyusyur" path="res://Gameplay/Entities/Player/Weapons/bullet.gd" id="1_v7oki"]
-[ext_resource type="Texture2D" uid="uid://ql8ymink4qtg" path="res://Textures/Bullet.png" id="2_v8qja"]
+[ext_resource type="Script" uid="uid://2wj3tvyusyur" path="res://Gameplay/Entities/Player/Weapons/projectile.gd" id="1_0asxd"]
+[ext_resource type="Texture2D" uid="uid://ql8ymink4qtg" path="res://Textures/Bullet.png" id="2_tdwcm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cv017"]
 radius = 4.0
 
-[node name="Bullet" type="Area2D" unique_id=511169454]
+[node name="Projectile" type="Area2D" unique_id=511169454]
 top_level = true
 collision_layer = 0
 collision_mask = 18
-script = ExtResource("1_v7oki")
+script = ExtResource("1_0asxd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=479514305]
 shape = SubResource("CircleShape2D_cv017")
@@ -19,6 +19,6 @@ shape = SubResource("CircleShape2D_cv017")
 texture_filter = 1
 position = Vector2(9.536743e-07, -9.536743e-07)
 scale = Vector2(1.875, 1.875)
-texture = ExtResource("2_v8qja")
+texture = ExtResource("2_tdwcm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
