@@ -53,4 +53,4 @@ func shoot() -> void:
 	new_projectile.damage = calculate_damage()
 
 func _on_shoot_timer_timeout() -> void:
-	shoot()
+		shoot()

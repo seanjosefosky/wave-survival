@@ -18,6 +18,7 @@ func _ready() -> void:
 func _physics_process(delta: float):
 	get_input()
 	move_and_slide()
+	health_regen()
 
 func get_input():
 	var input_direction = Input.get_vector(
@@ -40,12 +41,19 @@ func level_up() -> void:
 	get_tree().paused = true
 	var level_up_menu = preload("res://GUI/level_up_menu.tscn").instantiate()
 	get_node("/root/World").add_child(level_up_menu)
-	level_up_menu.setup(self, $Weapon)
+	level_up_menu.setup(self, $WeaponBase)
 
 func apply_damage(amount):
 	health -= amount
 	if health <= 0:
 		death()
+
+## regen per second
+func health_regen():
+	var amount = stats.health_regen
+	while true:
+		health += amount
+		await get_tree().create_timer(1).timeout
 
 func death() -> void:
 	# TODO: Death Animation

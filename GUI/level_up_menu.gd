@@ -13,7 +13,7 @@ func _on_button_1_pressed() -> void:
 	_choice_made()
 	
 func _on_button_2_pressed() -> void:
-	weapon.attack_speed *= 1.2
+	weapon.stats.attack_speed *= 1.2
 	_choice_made()
 	
 func _on_button_3_pressed() -> void:
