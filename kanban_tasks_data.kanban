@@ -51,13 +51,15 @@
 			"title": "In Progress",
 			"tasks": [
 				"3f4787ff-c1e6-412e-81cf-8dad44c5c329",
-				"70bfef3c-7c33-42d3-8360-810c314107aa"
+				"00f13529-129f-44b6-bba7-0d764f3d1f7c",
+				"3f4ab12a-d2e9-4ca0-9448-f38dbd66bf04"
 			]
 		},
 		{
 			"uuid": "dc31c799-25d7-46c8-9ed9-56c4128e2d21",
 			"title": "Done",
 			"tasks": [
+				"70bfef3c-7c33-42d3-8360-810c314107aa",
 				"f0ee5c7d-8500-47f6-939d-27686323b700",
 				"1cffe41d-9a59-4903-b026-d312733f474f",
 				"2feaba3c-783e-4e4d-9b81-363e44726f37",
@@ -162,7 +164,7 @@
 		},
 		{
 			"uuid": "70bfef3c-7c33-42d3-8360-810c314107aa",
-			"title": "Enemy Base Class",
+			"title": "Initial Enemy Base Class",
 			"description": "",
 			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
 			"steps": []
@@ -230,6 +232,20 @@
 			"title": "Hit Splats",
 			"description": "Draw the damage number on top of enemies when they take damage",
 			"category": "0d3e2f73-9f83-4843-b9ff-c0665ce33ba8",
+			"steps": []
+		},
+		{
+			"uuid": "00f13529-129f-44b6-bba7-0d764f3d1f7c",
+			"title": "Player not taking damage",
+			"description": "",
+			"category": "152c95ca-4595-4cf2-a1c4-c57523dc8aff",
+			"steps": []
+		},
+		{
+			"uuid": "3f4ab12a-d2e9-4ca0-9448-f38dbd66bf04",
+			"title": "Enemy takes too much damage",
+			"description": "",
+			"category": "152c95ca-4595-4cf2-a1c4-c57523dc8aff",
 			"steps": []
 		}
 	],

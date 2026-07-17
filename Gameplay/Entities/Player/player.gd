@@ -20,6 +20,7 @@ func _physics_process(delta: float):
 	move_and_slide()
 	health_regen()
 
+## Player controls
 func get_input():
 	var input_direction = Input.get_vector(
 		"move_left", 
@@ -29,11 +30,13 @@ func get_input():
 	)
 	velocity = input_direction * speed
 
+## Player collects xp
 func xp_collect() -> void:
 	xp += 1
 	if xp == xp_needed:
 		level_up()
 
+## Handles xp values and level ups
 func level_up() -> void:
 	level += 1
 	xp_needed += 10
@@ -43,6 +46,7 @@ func level_up() -> void:
 	get_node("/root/World").add_child(level_up_menu)
 	level_up_menu.setup(self, $WeaponBase)
 
+## Player takes (amount) damage
 func apply_damage(amount):
 	health -= amount
 	if health <= 0:
@@ -51,10 +55,11 @@ func apply_damage(amount):
 ## regen per second
 func health_regen():
 	var amount = stats.health_regen
-	while true:
+	if health < stats.max_health:
 		health += amount
 		await get_tree().create_timer(1).timeout
 
+## RIP
 func death() -> void:
 	# TODO: Death Animation
 	get_tree().paused = true

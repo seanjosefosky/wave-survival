@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://d2rrfqmfemnf3"]
+
+[ext_resource type="Script" uid="uid://ch2oonxw0k2gu" path="res://Gameplay/Entities/Enemies/enemy_stats_base.gd" id="1_5k5cj"]
+[ext_resource type="Texture2D" uid="uid://bakr5rtfcnpyr" path="res://Textures/BadGuy.png" id="2_fgc15"]
+
+[resource]
+script = ExtResource("1_5k5cj")
+name = "Red Face"
+sprite = ExtResource("2_fgc15")
+health = 10
+speed = 55.0
+metadata/_custom_type_script = "uid://ch2oonxw0k2gu"
